@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link href="/static/styles.css" rel="stylesheet">
+        <script src="/static/index.js"></script>
+
+        <title>Ulam Visualization</title>
+    </head>
+    <body>
+        <div id="nav">
+            <nav class="navbar bg-dark subnav">
+                <div class="container-fluid">
+                    <h3>The Ulam Spiral</h3>
+                    <form class="me-5 d-flex" action="javascript:void(0);">
+                        <input class="form-control me-2" required id="n-input" placeholder="Spiralize Up To n" style="width: 25vw;">
+                        <button class="btn btn-outline-light" style="width: 10vw;" id="vis">Visualize</button>
+                    </form>
+                    <button class="btn btn-outline-light ms-5" style="width: 10vw;" id="reset">Reset</button>
+                </div>
+            </nav>
+        </div>
+        <div id="main">
+            <canvas id="canvas" width=1000 height=1000 style="outline: 1px solid white;">
+            </canvas>
+        </div>
+    </body>
+</html>
