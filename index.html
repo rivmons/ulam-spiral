@@ -15,8 +15,8 @@
         <div id="nav">
             <nav class="navbar bg-dark subnav">
                 <div class="container-fluid">
-                    <h3>The Ulam Spiral</h3>
-                    <form class="me-5 d-flex" action="javascript:void(0);">
+                    <h3>Ulam Spiral</h3>
+                    <form class="me-5 d-flex" id="ulam-form">
                         <input class="form-control me-2" required id="n-input" placeholder="Spiralize Up To n" style="width: 25vw;">
                         <button class="btn btn-outline-light" style="width: 10vw;" id="vis">Visualize</button>
                     </form>
@@ -25,8 +25,61 @@
             </nav>
         </div>
         <div id="main">
-            <canvas id="canvas" width=1000 height=1000 style="outline: 1px solid white;">
+            <canvas id="canvas" width="1000" height="1000" style="outline: 1px solid white;">
             </canvas>
+            <div style="background-color: #343433; margin: 50px; width: 100%;">
+                <div style="margin: 10px;">
+                    <h2 style="margin-top: 8px; font-weight: bold; color: white;">The Ulam Spiral</h2><hr>
+                </div>
+                <hr color="white" size="4" style="margin-left: 5px; margin-right: 5px;">
+                <div style="margin: 10px; font-size: 20px;">
+                    <p style="color: white;">
+                        The Ulam Spiral, named after Stanislaw Ulam who discovered this representation of prime numbers in 1963, is a visual depiction of the set of prime numbers.
+                        In this visualizer, each number is represented by a point on the spiral. Each 'represented' number has a fixed distance from its neighboring numbers based on the
+                        'n' inputed. If a number is a spiral, it will be marked with a circle.
+                    </p>
+                    <p style="color: white;">
+                        The magnificence of the Ulam, or prime, spiral is the appearance of numerous vertical, diagonal, and horizontal lines. Looking at a spiral of randomly-generated
+                        odd numbers, the unlikely nature of these lines become apparent.
+                    </p>
+                    <div style="display: flex; justify-content: center;">
+                        <figure style="margin-right: 20px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Ulam_1.png" height="200" width="200" style="border: 3px solid #232323;">
+                            <figcaption style="text-align: center; color: white; font-size: small;">ulam spiral</figcaption>
+                        </figure>
+                        <figure style="margin-left: 20px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Randomly_black_odd_numbers.png" height="200" width="200" style="border: 3px solid #232323;">
+                            <figcaption style="text-align: center; color: white; font-size: small;">randomly-generated</figcaption>
+                        </figure>
+                    </div>
+                    <p style="color: white;">
+                        Other than its mind-bending depiction of primes, the Ulam Spiral may even play a large role in several unsolved number theory problems, such as
+                        the Twin Prime conjecture, Goldbach's conjecture, and Legendre's conjecture. Of all these problems, I am most familiar with the Twin Prime conjecture which asserts
+                        whether there are infinite number of prime numbers, p, such that p + 2 is also prime, forming a pair. Related to this conjecture, is the idea of a prime k-tuple
+                        which is a collection of numbers that represent a repeatable pattern of differences, k, between prime numbers. Galvanized by Yitang Zhang and furthered by prominent
+                        mathematicians such as Terence Tao and James Maynard, the lowest bound, or k, has been shown to be less than or equal to 246 and even less than or equal to 6 given the
+                        assertions of the Elliot-Halberstam conjecture.
+                    </p>
+                </div>
+            </div>
         </div>
+        <div class="modal" tabindex="-1" id="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Before you try</h5>
+                </div>
+                <div class="modal-body">
+                  <p>First of all, thanks for visiting! :)</p>
+                  <p>I developed this page with vanilla JS</p>
+                  <p>Please visit this webpage on a laptop or computer, as I haven't tested out the canvas API on mobile devices given their proportions</p>
+                  <p>Also, with large numbers, it will take some time to calculate the spiral and your device may get a bit laggy, so I recommend visualizing to, at most, 500000</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-m" style="background-color: blue;">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </body>
 </html>
